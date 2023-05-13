@@ -1,0 +1,8 @@
+<div class="row">
+  <div *ngFor="let item of actors" class="col-md-2">
+    <div class="my-2 position-relative" style="cursor: pointer;" routerLink="/details/{{item.id}}/{{'person'}}">
+      <img [src]="'https://image.tmdb.org/t/p/w500'+item.profile_path" class="w-100" alt="">
+      <h2 class="h6 py-2">{{item.name}}</h2>
+    </div>
+  </div>
+</div>

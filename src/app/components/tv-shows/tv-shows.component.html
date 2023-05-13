@@ -1,0 +1,9 @@
+<div class="row">
+  <div *ngFor="let item of tv" class="col-md-2">
+    <div class="my-2 position-relative" style="cursor: pointer;" routerLink="/details/{{item.id}}/{{'tv'}}">
+      <img [src]="'https://image.tmdb.org/t/p/w500'+item.poster_path" class="w-100" alt="">
+      <h2 class="h6 py-2">{{item.name}}</h2>
+      <div class="vote position-absolute top-0 end-0 bg-black rounded-3"> <i class="fa-solid fa-star" style="font-size: 12px; color: yellow;">{{item.vote_average.toFixed(1)}}</i></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-3">
+    <img *ngIf="item.profile_path" [src]="'https://image.tmdb.org/t/p/w500'+item?.profile_path" class="w-100" alt="">
+    <img *ngIf="item.poster_path" [src]="'https://image.tmdb.org/t/p/w500'+item?.poster_path" class="w-100" alt="">
+  </div>
+
+  <div class="col-md-6 d-flex align-items-center">
+    <div>
+      <h2 class="my-2">{{item?.title}}{{item?.name}}</h2>
+      <p class="text-muted py-2">{{item?.overview}} {{item?.biography}}</p>
+      <div *ngIf="item.vote_average">Vote Average : {{item?.vote_average}}</div>
+      <div *ngIf="item.vote_count">Count : {{item?.vote_count}}</div>
+      <div *ngIf="item.budgit">Budgit : {{item?.budgit}}</div>
+      <div *ngIf="item.birthday">birthday : {{item?.birthday}}</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<app-similar id="{{id}}" mediaType="{{mediaType}}"></app-similar>
+
